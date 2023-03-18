@@ -1,0 +1,33 @@
+<!-- Vai incluir aqui o código que está dentro do arquivo que estou apontando -->
+<%- include('includes/head.ejs')%>
+
+  <!-- Com ejs, vamos usar javascript dentro do html
+<%= %> não permite inserir formatação html, mostra as tags html
+<%- %> permite inserir formatação html, executa as tags html
+<% %> permite inserir código javascript, controle de fluxo (if, for...)
+<%# %> permite adicionar comentários
+
+Doc => https://ejs.co/
+-->
+
+  <section class="container">
+
+    <h1>
+      <% if(typeof titulo !=='undefined' ) { %>
+        <%= titulo %>
+
+          <% } else { %>
+            Título padrão da página
+            <% } %>
+    </h1>
+
+    <form action="/" method="post">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <label>Cliente</label>
+      <input type="text" name="cliente">
+      <button>Submit</button>
+    </form>
+
+  </section>
+
+  <%- include('includes/footer.ejs')%>
