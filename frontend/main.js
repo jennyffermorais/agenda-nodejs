@@ -1,6 +1,10 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import Login from './modules/Login';
+// import './assets/css/style.css';
 
-import './assets/css/style.css';
+const login = new Login('.form-login');
+const cadastro = new Login('.form-cadastro');
 
-console.log('Olá mundo 3');
+login.init();
+cadastro.init();
