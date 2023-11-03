@@ -86,6 +86,9 @@ $ npm start
 
 # O app vai inicializar em <http://localhost:3000>
 
+# Para iniciar o webpack
+$ npm run dev
+
 # Banco de dados
 # Você precisará configurar um arquivo .env com as seguintes variáveis
 # CONNECTIONSTRING (link gerado pelo MongoDB)
